@@ -1,3 +1,12 @@
-<h1>Suck My Cocktail!</h1>
-<h2>The ultimate database for getting wasted!</h2>
+<h1>Cocktailizer</h1>
+<p>The ultimate tool for getting wasted!</p>
 <p>Find me in app/views/cocktails/index.html.erb</p>
+<% @cocktails.each do |cocktail| %>
+   <ul>
+     <il><%=link_to cocktail.name, cocktail %></il>
+   </ul>
+   <% end %>
+   <br>
+   <br>
+   <br>
+   <%= link_to 'Create new cocktail', new_cocktail_path %></td>
