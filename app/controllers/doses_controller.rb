@@ -3,7 +3,6 @@ class DosesController < ApplicationController
   before_action :set_cocktail, only: [:new]
 
   def new
-    raise
     @dose = Dose.new
   end
 
@@ -17,7 +16,12 @@ class DosesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def destroy
+    @dose.destroy
+    redirect_to cocktails_path, notice: 'We removed your cocktail from the database.'
   end
 
   private
@@ -28,9 +32,5 @@ class DosesController < ApplicationController
 
   def set_dose
     @dose = Dose.find(params[:id])
-  end
-
-  def dose_params
-    params.require(:dose).permit(:description, :ingredient_id, :cocktail_id)
   end
 end

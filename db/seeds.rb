@@ -19,13 +19,3 @@ array.each do |minihash|
   Ingredient.create(name:ingredient)
   puts "Added the #{ingredient} ingredient"
 end
-
-magarita = Cocktail.create(name: 'magarita')
-Dose.create(description: '1/2 part', cocktail: magarita, ingredient: Ingredient.last)
-
-Dose.create(description: '1/3 part', cocktail: magarita, ingredient: Ingredient.first)
-
-arak_mix = Cocktail.create(name: 'arak_mix')
-Dose.create(description: '1/2 part', cocktail: arak_mix, ingredient: Ingredient.last)
-
-Dose.create(description: '1/3 part', cocktail: arak_mix, ingredient: Ingredient.first)
