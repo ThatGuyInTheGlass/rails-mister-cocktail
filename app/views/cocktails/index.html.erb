@@ -1,5 +1,12 @@
-<h1>Cocktailizer</h1>
-<p>The ultimate tool for getting wasted!</p>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://c4.wallpaperflare.com/wallpaper/524/790/426/sea-beach-palm-trees-coconut-wallpaper-preview.jpg);">
+  <div class="container">
+    <h1>The Big Bad Cocktailizer</h1>
+    <p>The ultimate tool for getting wasted!</p>
+  </div>
+</div>
+
+<div class="cards">
 <% @cocktails.each do |cocktail| %>
    <ul>
      <il><%=link_to cocktail.name, cocktail %></il>
@@ -8,4 +15,6 @@
    <br>
    <br>
    <br>
-   <%= link_to 'Create new cocktail', new_cocktail_path %></td>
+</div>
+
+ <%= link_to 'Create new cocktail', new_cocktail_path, class:"btn btn-primary" %>
